@@ -7,11 +7,10 @@
     "48": "images/icons/satelles48.png",
     "128": "images/icons/satelles128.png"
   },
-  "background": {
-    "service_worker": "src/service-worker.js",
-    "type": "module"
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "images/icons/satelles48.png"
   },
-  "action": { },
   "permissions": [
     "scripting"
   ],
