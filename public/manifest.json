@@ -1,5 +1,5 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "Providentia Satelles",
   "version": "1.0.0",
   "description": "Providentia Satelles is a browser-based personal assistance tool, designed for real-time user support via the Providentia Network.",
@@ -7,15 +7,18 @@
     "48": "images/icons/satelles48.png",
     "128": "images/icons/satelles128.png"
   },
-  "action": {
+  "browser_action": {
     "default_popup": "index.html",
     "default_icon": "images/icons/satelles48.png"
   },
   "permissions": [
-    "scripting"
+    "http://*/*",
+    "https://*/*"
+
   ],
-  "host_permissions": [
-      "http://*/*",
-      "https://*/*"
-  ]
+  "content_security_policy": "script-src 'self' https://code.jquery.com https://cdn.jsdelivr.net; object-src 'self';",
+  "browser_specific_settings": {
+    "gecko": {
+    }
+  }
 }
